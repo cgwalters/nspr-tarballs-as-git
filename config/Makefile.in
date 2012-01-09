@@ -150,3 +150,7 @@ $(OBJDIR)/%$(PROG_SUFFIX): $(OBJDIR)/%.$(OBJ_SUFFIX)
 install:: nspr.m4
 	$(NSINSTALL) -D $(DESTDIR)$(datadir)/aclocal
 	$(NSINSTALL) -t -m 0644 $< $(DESTDIR)$(datadir)/aclocal
+
+install:: nspr.pc
+	$(NSINSTALL) -D $(DESTDIR)$(libdir)/pkgconfig
+	$(NSINSTALL) -t -m 0644 $< $(DESTDIR)$(libdir)/pkgconfig
