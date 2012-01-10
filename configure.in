@@ -45,6 +45,9 @@ AC_INIT(config/libc_r.h)
 AC_CONFIG_AUX_DIR(build/autoconf)
 AC_CANONICAL_SYSTEM
 
+dnl http://people.gnome.org/~walters/docs/build-api.txt
+echo \#buildapi-variable-no-builddir >/dev/null
+
 dnl ========================================================
 dnl = Defaults
 dnl ========================================================
