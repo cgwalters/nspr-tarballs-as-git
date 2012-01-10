@@ -45,6 +45,9 @@ VPATH		= @srcdir@
 
 include $(MOD_DEPTH)/config/autoconf.mk
 
+# http://people.gnome.org/~walters/docs/build-api.txt
+.NOTPARALLEL:
+
 MAKE := $(patsubst -j%,,$(MAKE)) -j1
 
 DIRS = config pr lib
